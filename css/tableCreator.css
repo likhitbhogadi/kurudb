@@ -1,0 +1,183 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Table Creator Container */
+.table-creator {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.table-controls label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.table-controls input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Table container */
+.table-container, .editable-table-container {
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+/* Created table styles */
+.created-table, .editable-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #0d6efd;
+    margin-bottom: 20px;
+}
+
+.created-table th, .editable-table th {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #fff;
+}
+
+.created-table td, .editable-table td {
+    padding: 8px;
+    border: 1px solid #ced4da;
+}
+
+.created-table tr:nth-child(even), .editable-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.created-table tr:hover, .editable-table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Table editor styles */
+.table-editor {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Selected cell highlight */
+.selected-cell {
+    background-color: #e2f0ff !important;
+    box-shadow: inset 0 0 0 2px #0d6efd;
+}
+
+/* Cell editor */
+.cell-editor {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.editor-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.editor-controls label {
+    font-weight: bold;
+}
+
+.editor-controls textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Formatting controls */
+.formatting-controls {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.formatting-controls button {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.formatting-controls button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Table actions */
+.table-actions, .table-actions-edit {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#finishEditing {
+    background-color: #198754;
+}
+
+#finishEditing:hover {
+    background-color: #157347;
+}
+
+#deleteRow, #deleteColumn {
+    background-color: #dc3545;
+}
+
+#deleteRow:hover, #deleteColumn:hover {
+    background-color: #bb2d3b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-controls, .table-actions, .table-actions-edit {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .formatting-controls {
+        flex-wrap: wrap;
+    }
+}
